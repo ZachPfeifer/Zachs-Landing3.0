@@ -1,7 +1,7 @@
 <template>
   <div id="app container-fluid op">
     <router-link to="/">Home</router-link>|
-    <router-link to="/about">About</router-link>
+    <router-link to="/messages">Messages</router-link>
     <!-- <router-view /> -->
 
     <!-- Sidebar/menu -->

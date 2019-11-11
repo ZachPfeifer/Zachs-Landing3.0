@@ -1,5 +1,7 @@
 <template>
-  <div class="Messages"></div>
+  <div class="Messages">
+    <h1>TEST</h1>
+  </div>
 </template>
 
 
