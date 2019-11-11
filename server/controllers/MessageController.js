@@ -1,4 +1,5 @@
 import MessageService from '../services/MessageService'
+// import { Authorize } from '../middleware/authorize.js'
 import express from 'express'
 
 
@@ -22,8 +23,8 @@ export default class MessageController {
   async getAll(req, res, next) {
     try {
       let messages = await _messageService.find({})
+      console.log("Getting all Messages!", messages)
       return res.send(messages)
-      console.log("Getting all Messages!")
 
     } catch (error) { next(error) }
   }
@@ -38,11 +39,11 @@ export default class MessageController {
   }
 
   async create(req, res, next) {
-    //FIXME Data Undifned / Body ANy
     try {
+      // req.body = req.body
       let data = await _messageService.create(req.body)
-      console.log(req.body);
-      console.log("Successfully Sent Message", data)
+      // console.log(req.body);
+      console.log("Successfully Sent Message")
       return res.status(201).send(data)
     } catch (error) {
       next(error)

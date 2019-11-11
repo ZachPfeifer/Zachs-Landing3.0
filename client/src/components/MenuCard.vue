@@ -2,52 +2,55 @@
   <div class="MenuCard">
     <div class="container mt-3">
       <article class="card">
-        <a href="#" class="card__link">
-          <!-- Icon -->
-          <div class="card__icon">
-            <svg viewBox="0 0 1129 994">
-              <g fill="none" fill-rule="nonzero" stroke="#999" stroke-width="41">
-                <path d="M564.5 212.437L95.67 873.5h937.66L564.5 212.437z" />
-                <path d="M564.5 407.47L163.638 973.5h801.724L564.5 407.47z" />
-                <path d="M564.5 35.409L39.699 774.5H1089.3L564.5 35.409z" />
-              </g>
+        <!-- CLOCK -->
+        <div class="row" id="intro">
+          <h1 class="col">{{ timestamp }}</h1>
+        </div>
+        <!-- CLOCK END -->
+        <!-- Icon -->
+        <div class="card__icon">
+          <svg viewBox="0 0 1129 994">
+            <g fill="none" fill-rule="nonzero" stroke="#999" stroke-width="41">
+              <path d="M564.5 212.437L95.67 873.5h937.66L564.5 212.437z" />
+              <path d="M564.5 407.47L163.638 973.5h801.724L564.5 407.47z" />
+              <path d="M564.5 35.409L39.699 774.5H1089.3L564.5 35.409z" />
+            </g>
+          </svg>
+        </div>
+
+        <!-- Media -->
+        <div class="card__media">
+          <svg viewBox="0 0 1129 994">
+            <g fill="none" fill-rule="nonzero" stroke="#F5F5F5" stroke-width="41">
+              <path d="M564.5 212.437L95.67 873.5h937.66L564.5 212.437z" />
+              <path d="M564.5 407.47L163.638 973.5h801.724L564.5 407.47z" />
+              <path d="M564.5 35.409L39.699 774.5H1089.3L564.5 35.409z" />
+            </g>
+          </svg>
+        </div>
+
+        <!-- Header -->
+        <div class="card__header">
+          <h3 class="card__header-title">Zachary Pfeifer</h3>
+          <p class="card__header-meta">
+            <a
+              href="javascript:void(0)"
+              onclick="w3_close()"
+              class="w3-bar-item w3-button w3-padding w3-hide-large"
+            >CLOSE</a>
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PROJECTS</a>
+            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+          </p>
+          <div class="card__header-icon">
+            <svg viewBox="0 0 28 25">
+              <path
+                fill="#fff"
+                d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z"
+              />
             </svg>
           </div>
-
-          <!-- Media -->
-          <div class="card__media">
-            <svg viewBox="0 0 1129 994">
-              <g fill="none" fill-rule="nonzero" stroke="#F5F5F5" stroke-width="41">
-                <path d="M564.5 212.437L95.67 873.5h937.66L564.5 212.437z" />
-                <path d="M564.5 407.47L163.638 973.5h801.724L564.5 407.47z" />
-                <path d="M564.5 35.409L39.699 774.5H1089.3L564.5 35.409z" />
-              </g>
-            </svg>
-          </div>
-
-          <!-- Header -->
-          <div class="card__header">
-            <h3 class="card__header-title">Zachary Pfeifer</h3>
-            <p class="card__header-meta">
-              <a
-                href="javascript:void(0)"
-                onclick="w3_close()"
-                class="w3-bar-item w3-button w3-padding w3-hide-large"
-              >CLOSE</a>
-              <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">PROJECTS</a>
-              <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
-              <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-            </p>
-            <div class="card__header-icon">
-              <svg viewBox="0 0 28 25">
-                <path
-                  fill="#fff"
-                  d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z"
-                />
-              </svg>
-            </div>
-          </div>
-        </a>
+        </div>
         <marquee scrollamount="10" direction="right" behavior="scroll">
           <img
             class="d-flex justify-content-center"
@@ -87,10 +90,27 @@
 export default {
   name: "MenuCard",
   data() {
-    return {};
+    return { timestamp: "" };
   },
   computed: {},
-  methods: {},
+  created() {
+    setInterval(this.getNow, 1000);
+  },
+  methods: {
+    getNow: function() {
+      const today = new Date();
+      const date =
+        today.getFullYear() +
+        "-" +
+        (today.getMonth() + 1) +
+        "-" +
+        today.getDate();
+      const time =
+        today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      const dateTime = date + " " + time;
+      this.timestamp = dateTime;
+    }
+  },
   components: {}
 };
 </script>
@@ -120,6 +140,14 @@ html {
     opacity: 1;
     transform: scale(1) translateY(0);
   }
+}
+#intro {
+  color: antiquewhite;
+  width: 250px; /* or whatever width you want. */
+  max-width: 250px; /* or whatever width you want. */
+  display: flex;
+  float: right;
+  text-align: end;
 }
 
 .container {

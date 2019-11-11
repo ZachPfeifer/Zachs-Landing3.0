@@ -9,12 +9,13 @@ mongoose.connection.on('error', err => {
 })
 
 //TODO: ADD YOUR CONNECTION STRING!!!
+const connectionString = process.env.CONNECTION_STRING;
 
 export default class DbContext {
   static async connect() {
     try {
       let status = await mongoose.connect(process.env.CONNECTION_STRING)
-      console.log("CONNECTED")
+      console.log("CONNECTED TO DB")
       return status
     } catch (e) {
       console.error(e)

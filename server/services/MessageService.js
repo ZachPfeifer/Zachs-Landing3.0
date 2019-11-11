@@ -24,6 +24,6 @@ let _schema = new Schema({
 
 export default class MessageService {
   get repository() {
-    return mongoose.model('Message', _schema)
+    return mongoose.model('message', _schema)
   }
 }
