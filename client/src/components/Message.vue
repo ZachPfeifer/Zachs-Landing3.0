@@ -1,15 +1,11 @@
 <template>
-  <div class="Messages">
-    <h1>TEST</h1>
-    <Message />
-  </div>
+  <div class="Message"></div>
 </template>
 
 
 <script>
-import Message from "../components/Message";
 export default {
-  name: "Messages",
+  name: "Message",
   data() {
     return {};
   },
