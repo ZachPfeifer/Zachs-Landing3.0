@@ -31,9 +31,9 @@ server.use(cors(corsOptions))
 
 
 //YOUR ROUTES HERE!!!!!!
-import BoardController from './controllers/MessageController'
+import MessageController from './controllers/MessageController'
 
-server.use('/api/boards', new BoardController().router)
+server.use('/api/messages', new MessageController().router)
 
 
 

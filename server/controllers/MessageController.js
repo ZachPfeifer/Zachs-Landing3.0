@@ -23,6 +23,8 @@ export default class BoardsController {
     try {
       let messages = await _messageService.find({})
       res.send(messages)
+      console.log("Getting all Messages!")
+
     } catch (error) { next(error) }
   }
 
@@ -39,6 +41,7 @@ export default class BoardsController {
     try {
       let newMessage = await _messageService.create(req.body)
       res.send(newMessage)
+      console.log("Successfully Sent Message")
     } catch (error) {
       next(error)
 

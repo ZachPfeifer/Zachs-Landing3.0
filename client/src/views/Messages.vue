@@ -1,7 +1,7 @@
 <template>
   <div class="Messages">
-    <h1>TEST</h1>
-    <Message />
+    <h1>Sent Messages</h1>
+    <Message class="col" v-for="message in messages" :vaultProp="message" :key="message.id" />
   </div>
 </template>
 
@@ -13,9 +13,17 @@ export default {
   data() {
     return {};
   },
-  computed: {},
+  mounted() {
+    this.$store.dispatch("getMessages");
+    this.$store.state.messages;
+  },
+  computed: {
+    messages() {
+      return this.$store.state.messages;
+    }
+  },
   methods: {},
-  components: {}
+  components: { Message }
 };
 </script>
 

@@ -7,28 +7,46 @@
           <b>Contact Me</b>
         </h4>
         <p>Are you interested in my work or have any question I can help you with? Send me a message.</p>
-        <form action="/action_page.php" target="_blank">
+        <form @submit.prevent="SendMessage">
           <div class="w3-section">
             <label>Name</label>
-            <input class="w3-input w3-border" type="text" name="Name" required />
+            <input
+              v-model="newMessage.name"
+              class="w3-input w3-border"
+              type="text"
+              name="Name"
+              required
+            />
           </div>
           <div class="w3-section">
             <label>Email</label>
-            <input class="w3-input w3-border" type="text" name="Email" required />
+            <input
+              v-model="newMessage.email"
+              class="w3-input w3-border"
+              type="text"
+              name="Email"
+              required
+            />
           </div>
           <div class="w3-section">
             <label>Company</label>
-            <input class="w3-input w3-border" type="text" name="Company" required />
+            <input
+              v-model="newMessage.company"
+              class="w3-input w3-border"
+              type="text"
+              name="Company"
+            />
           </div>
           <div class="w3-section">
             <label>Message</label>
-            <input class="w3-input w3-border" type="text" name="Message" required />
+            <input
+              v-model="newMessage.message"
+              class="w3-input w3-border"
+              type="text"
+              name="Message"
+            />
           </div>
-          <button
-            @click="SnedMessage()"
-            type="submit"
-            class="w3-button w3-block w3-black w3-margin-bottom"
-          >Send Message</button>
+          <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button>
         </form>
       </div>
     </div>
@@ -40,12 +58,22 @@
 export default {
   name: "Contact",
   data() {
-    return {};
+    return {
+      newMessage: {
+        name: "",
+        email: "",
+        company: "",
+        message: ""
+      }
+    };
   },
-  computed: {
-    SendMesage() {}
+  computed: {},
+  methods: {
+    SendMessage() {
+      this.$store.dispatch("createMesage", this.newMessage);
+      this.newMessage = { name: "", email: "", company: "", message: "" };
+    }
   },
-  methods: {},
   components: {}
 };
 </script>
