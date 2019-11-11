@@ -6,7 +6,7 @@ import express from 'express'
 let _messageService = new MessageService().repository
 
 //PUBLIC
-export default class BoardsController {
+export default class MessageController {
   constructor() {
     this.router = express.Router()
       .get('', this.getAll)
@@ -22,7 +22,7 @@ export default class BoardsController {
   async getAll(req, res, next) {
     try {
       let messages = await _messageService.find({})
-      res.send(messages)
+      return res.send(messages)
       console.log("Getting all Messages!")
 
     } catch (error) { next(error) }
@@ -33,15 +33,17 @@ export default class BoardsController {
     try {
       let message = await _messageService.findById(req.params.id)
       //FIXME can do an if for a req for an unmade ID
-      res.send(message)
+      return res.send(message)
     } catch (error) { next(error) }
   }
 
   async create(req, res, next) {
+    //FIXME Data Undifned / Body ANy
     try {
-      let newMessage = await _messageService.create(req.body)
-      res.send(newMessage)
-      console.log("Successfully Sent Message")
+      let data = await _messageService.create(req.body)
+      console.log(req.body);
+      console.log("Successfully Sent Message", data)
+      return res.status(201).send(data)
     } catch (error) {
       next(error)
 

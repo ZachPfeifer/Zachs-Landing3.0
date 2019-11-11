@@ -22,18 +22,20 @@ export default new Vuex.Store({
     ActiveMessage: {}
   },
   mutations: {
-    setMessages(state, payload) {
-      state.messages = payload
-    },
     setActiveMessage(state, payload) {
       state.ActiveMessage = payload
+    },
+    setMessages(state, messages) {
+      state.messages = messages
     }
   },
   actions: {
     async getMessages({ commit, dispatch }) {
       try {
+        // debugger
         let res = await api.get('messages')
         commit('setMessages', res.data)
+
       } catch (error) {
         console.error(error)
       }
@@ -43,7 +45,7 @@ export default new Vuex.Store({
       try {
         let res = await api.get(`/messages/${payload}`)
         commit('setActiveMessage', res.data)
-        router.push({ name: "messages" })
+        // router.push({ name: "messages" })
       } catch (error) {
         console.error(error)
 
@@ -52,6 +54,7 @@ export default new Vuex.Store({
 
     async createMesage({ dispatch }, payload) {
       try {
+        // debugger
         let res = await api.post('messages', payload)
         dispatch('getMessages')
         console.log(payload)

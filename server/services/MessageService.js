@@ -6,9 +6,9 @@ const Schema = mongoose.Schema
 
 let _schema = new Schema({
   name: { type: String, required: true },
-  email: { type: String, },
+  email: { type: String },
   company: { type: String },
-  message: { type: String, maxlength: 300 },
+  message: { type: String, maxlength: 300 }
 }, { timestamps: true })
 
 // //CASCADE ON DELETE
