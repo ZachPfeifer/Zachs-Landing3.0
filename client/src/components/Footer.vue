@@ -26,7 +26,7 @@
               <a class="social-link" href="https://www.facebook.com/zach.pfeifer.10">
                 <i class="fab fa-facebook fa-lg"></i>
 
-                <span class="w3-large">FaceBook</span>
+                <span class="w3-large">&nbsp; FaceBook</span>
                 <br />
                 <span>
                   <p class="font-italic">Where faces go</p>
@@ -36,7 +36,7 @@
             <li class="w3-padding-16 w3-hover-black">
               <a class="social-link" href="https://github.com/ZachPfeifer">
                 <i class="fab fa-github fa-lg"></i>
-                <span class="w3-large">GitHub</span>
+                <span class="w3-large">&nbsp; GitHub</span>
                 <br />
                 <span>
                   <p class="font-italic">Code Hub</p>
@@ -46,7 +46,7 @@
             <li class="w3-padding-16 w3-hover-black">
               <a class="social-link" href="https://www.linkedin.com/in/zachary-pfeifer-7227b3192/">
                 <i class="fab fa-linkedin fa-lg"></i>
-                <span class="w3-large">Linked-In</span>
+                <span class="w3-large">&nbsp; Linked-In</span>
                 <br />
                 <span>
                   <p class="font-italic">Professional Profile</p>
