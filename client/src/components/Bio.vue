@@ -16,11 +16,7 @@
       <div class="w3-content w3-justify" style="max-width:600px">
         <h4 class="scrible-text">Zachary Pfeifer</h4>
         <p>
-          Hello my name is Zachary Pfeifer and I am an aspiring Software Developer. I have been interested in coding and
-          technology since Highschool where I got my first taste of HTML/Css. From there I dipped my towes into technical
-          support for computers which lead me to want to further my knowledge in coding. Now I am a grauduate from Boise
-          Codeworks. At Codeworks I aquired knowledge on how to build full-stack app and the work that goes into
-          maintaining them. As of the moment I am looking to break into the Software Developement Industry.
+         Hello, my name is Zachary Pfeifer, and I am an aspiring Software Developer. I have been interested in coding and technology since High school where I got my first taste of HTML/CSS. From there I dipped my toes into technical support for computers which lead me to want to further my knowledge in coding. Now I am a graduate from Boise Codeworks. At Codeworks I acquired knowledge on how to build full-stack app and the work that goes into maintaining them. As of the moment I am looking to break into the Software Development Industry.
         </p>
         <p font-weight-bold>Mail: mr.zman1@yahoo.com</p>
         <p font-weight-bold>Telephone: (503) 689-2022</p>
