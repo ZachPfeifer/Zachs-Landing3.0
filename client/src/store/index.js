@@ -32,7 +32,6 @@ export default new Vuex.Store({
   actions: {
     async getMessages({ commit, dispatch }) {
       try {
-        // debugger
         let res = await api.get('messages')
         commit('setMessages', res.data)
 
@@ -54,7 +53,6 @@ export default new Vuex.Store({
 
     async createMesage({ dispatch }, payload) {
       try {
-        // debugger
         let res = await api.post('messages', payload)
         dispatch('getMessages')
         console.log(payload)
