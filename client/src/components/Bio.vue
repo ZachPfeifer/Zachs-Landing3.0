@@ -15,9 +15,7 @@
       />
       <div class="w3-content w3-justify" style="max-width:600px">
         <h4 class="scrible-text">Zachary Pfeifer</h4>
-        <p>
-         Hello, my name is Zachary Pfeifer, and I am an aspiring Software Developer. I have been interested in coding and technology since High school where I got my first taste of HTML/CSS. From there I dipped my toes into technical support for computers which lead me to want to further my knowledge in coding. Now I am a graduate from Boise Codeworks. At Codeworks I acquired knowledge on how to build full-stack app and the work that goes into maintaining them. As of the moment I am looking to break into the Software Development Industry.
-        </p>
+        <p>Hello, my name is Zachary Pfeifer, and I am an aspiring Software Developer. I have been interested in coding and technology since High school where I got my first taste of HTML/CSS. From there I dipped my toes into technical support for computers which lead me to want to further my knowledge in coding. Now I am a graduate from Boise Codeworks. At Codeworks I acquired knowledge on how to build full-stack app and the work that goes into maintaining them. As of the moment I am looking to break into the Software Development Industry.</p>
         <p font-weight-bold>Mail: mr.zman1@yahoo.com</p>
         <p font-weight-bold>Telephone: (503) 689-2022</p>
         <hr class="w3-opacity" />
@@ -37,10 +35,9 @@
         <div class="w3-white">
           <div class="w3-container w3-padding-small w3-center w3-grey" style="width:50%">Comfortable</div>
         </div>
-        <a href="../assests/ZacharyPfeiferSD-Resume.pdf" download>
+        <a href="../assets/ZacharyPfeiferSD-Resume.pdf" download="ZacharyPfeiferSD-Resume">
           <button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom">
-            Download
-            Resume
+            <i class="fa fa-download"></i> Resume
           </button>
         </a>
       </div>
