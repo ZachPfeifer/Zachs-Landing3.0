@@ -260,27 +260,27 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img
-                  src="https://www.stickpng.com/assets/thumbs/58889546bc2fc2ef3a1860b8.png"
-                  alt="Inspire"
+                  src="../assets/React-Inspire.png"
+                  alt="React-Inspire"
                   style="width:300px;height:300px;"
                 />
-                <h1 class="centered">Coming Soon</h1>
+                <h1 class="centered">Inspire with React</h1>
               </div>
               <div class="flip-card-back">
                 <hr />
-                <p>UNKOWN</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate delectus accusantium quas nisi architecto, enim, quasi veritatis quia a aliquam optio atque incidunt. Suscipit, harum. Voluptas, odio. Quasi, sequi voluptatum?</p>
+                <p>React</p>
+                <p>This app is a clone of the Inspire Project I previously built but this Time I am utilizing the React Framework/Library</p>
                 <hr />
                 <p class="card-text">
                   <button
                     type="button"
                     class="btn btn-dark m-1"
-                    onclick="window.location.href = 'https://github.com/ZacharyTyler/Kanban';"
+                    onclick="window.location.href = 'https://github.com/ZachPfeifer/react-inspire';"
                   >GitHub</button>
                   <button
                     type="button"
                     class="btn btn-dark m-1"
-                    onclick="window.location.href = 'https://zachkanban.herokuapp.com/#/login';"
+                    onclick="window.location.href = 'https://zachpfeifer.github.io/react-inspire/';"
                   >Website</button>
                 </p>
               </div>
@@ -290,27 +290,27 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img
-                  src="https://www.stickpng.com/assets/thumbs/58889546bc2fc2ef3a1860b8.png"
-                  alt="RunesKeep"
+                  src="../assets/React-Weather.png"
+                  alt="React-Weather"
                   style="width:300px;height:300px;"
                 />
-                <h1 class="centered">Coming Soon</h1>
+                <h1 class="centered">Daily Weather App</h1>
               </div>
               <div class="flip-card-back">
                 <hr />
-                <p>UNKOWN</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eum quis nihil corrupti quod accusamus rerum fuga ratione tempore sapiente enim esse error, voluptates ipsam iusto reiciendis animi necessitatibus libero.</p>
+                <p>React</p>
+                <p>This application was made with the React Framework/Library. This app allows you to search for current weather by City and Country.</p>
                 <hr />
                 <p class="card-text">
                   <button
                     type="button"
                     class="btn btn-dark m-1"
-                    onclick="window.location.href = 'https://github.com/ZachPfeifer/Keepr';"
+                    onclick="window.location.href = 'https://github.com/ZachPfeifer/react-weather-app';"
                   >GitHub</button>
                   <button
                     type="button"
                     class="btn btn-dark m-1"
-                    onclick="window.location.href = 'https://www.stickpng.com/assets/thumbs/58889546bc2fc2ef3a1860b8.png';"
+                    onclick="window.location.href = 'https://zachpfeifer.github.io/react-weather-app/';"
                   >Website</button>
                 </p>
               </div>
