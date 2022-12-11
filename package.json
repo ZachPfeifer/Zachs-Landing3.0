@@ -18,7 +18,7 @@
         "dotenv": "^8.2.0",
         "env": "0.0.2",
         "esm": "^3.2.25",
-        "express": "^4.14.1",
+        "express": "^4.17.3",
         "express-session": "^1.17.0",
         "mongoose": "^5.7.11",
         "sweetalert": "^2.1.2",
